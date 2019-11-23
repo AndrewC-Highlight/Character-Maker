@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css?family=Abel|Lato|Source+Sans+Pro");
+body {
+  font-family: "Lato", sans-serif;
+  margin-top: 80px;
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  background-color: #2c2c2c;
+  z-index: 99;
+}
+header .home {
+  font-size: 1.6rem;
+  color: white;
+  text-decoration: none;
+}
+header * {
+  display: inline;
+}
+header li {
+  margin: 20px;
+}
+
+.link {
+  letter-spacing: 2px;
+  font-size: 22px;
+  padding: 0.3em 1em;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  background-color: transparent;
+  outline: none;
+}
+.link.underLine {
+  color: white;
+}
+.link.underLine.underLine:after, .link.underLine.underLine:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #9bf7cc;
+  transition: all 0.3s ease;
+  transform: scale(0.5);
+}
+.link.underLine.underLine:hover:before {
+  top: 0;
+  transform: scale(1);
+}
+.link.underLine.underLine:hover:after {
+  transform: scale(1);
+}
+
+.mainForm {
+  height: 300px;
+  width: 350px;
+  margin: 0 auto;
+  padding-top: 25px;
+  font-size: 1.2em;
+  text-align: center;
+}
+.mainForm input[type=text], .mainForm input[type=password] {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  width: 180px;
+  border-radius: 6px;
+  border: 2px solid #35c779a1 !important;
+}
+.mainForm input[type=text]:hover, .mainForm input[type=password]:hover {
+  color: #494949 !important;
+  border-radius: 50px;
+  border-color: #494949 !important;
+  transition: all 0.8s ease 0s;
+}
+.mainForm input[type=text]:focus, .mainForm input[type=password]:focus {
+  color: #494949 !important;
+  border-radius: 50px;
+  border-color: #494949 !important;
+  outline: 0;
+}
+.mainForm .formSubmit {
+  background: transparent;
+  outline: none;
+  position: relative;
+  border: 2px solid #35c779a1;
+  padding: 10px 5px;
+  overflow: hidden;
+  width: 180px;
+  border-radius: 6px;
+  font-size: 1.5rem;
+}
+.mainForm .formSubmit div {
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #707070;
+  transition: all 0.3s ease-in-out;
+}
+.mainForm .formSubmit:hover:before {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.mainForm .formSubmit:before {
+  content: attr(data-hover);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #4b4a4a;
+  opacity: 0;
+  transform: translate(-100%, 0);
+  transition: all 0.3s ease-in-out;
+}
+.mainForm .formSubmit:hover {
+  cursor: pointer;
+  border-radius: 50px;
+  border-color: #494949 !important;
+  transition: all 0.8s ease 0s;
+}
+.mainForm .formSubmit:hover div {
+  opacity: 0;
+  transform: translate(100%, 0);
+}
+
+#characterMessage {
+  display: none;
+  top: 250px;
+  width: 250px;
+  height: 650px;
+  position: absolute;
+  z-index: 200;
+  right: 0px;
+  overflow: hidden;
+}
+
+#characterMessage h3 {
+  width: 200px;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+}
+
+#speech {
+  height: 160px;
+  width: 250px;
+  z-index: 300;
+}
+
+#errorMessage {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: red;
+  font-style: italic;
+}
+
+#character {
+  z-index: 225;
+  margin-top: -110px;
+  margin-left: 125px;
+  height: 450px;
+  width: 300px;
+  -ms-transform: rotate(330deg);
+  -webkit-transform: rotate(330deg);
+  transform: rotate(330deg);
+}
+
+#characterWrapper {
+  width: 100%;
+  margin: auto;
+}
+#characterWrapper #diceContainer {
+  text-align: center;
+}
+#characterWrapper #diceContainer button {
+  background: none;
+  border: none;
+}
+#characterWrapper #diceContainer button:focus {
+  outline: 0;
+}
+#characterWrapper #diceContainer #dice {
+  cursor: pointer;
+}
+
+#wrapper {
+  text-align: center;
+}
+#wrapper #sideContent ul {
+  list-style-type: none;
+}
+
+#upgradeContainer {
+  text-align: center;
+}
+#upgradeContainer ul {
+  list-style-type: none;
+}
+#upgradeContainer ul li {
+  list-style-type: none;
+}
+#upgradeContainer .upgradeButton {
+  color: #35c779;
+  text-transform: uppercase;
+  background: #ffffff;
+  padding: 20px;
+  border: 3px solid #35c779 !important;
+  border-radius: 6px;
+  display: inline-block;
+  text-decoration: none;
+  width: 150px;
+  margin-bottom: 0.8rem;
+}
+#upgradeContainer .upgradeButton:hover {
+  color: #494949 !important;
+  border-radius: 50px;
+  border-color: #494949 !important;
+  transition: all 0.3s ease 0s;
+}
+#upgradeContainer .upgradeButton:focus {
+  outline: 0;
+}
+
+#characterForm {
+  width: 50%;
+  padding: 10px 5px;
+  margin: 8px;
+}
+#characterForm input {
+  display: block;
+}
+#characterForm input[type=submit] {
+  background-color: #46cc79;
+  /* Green */
+  border: none;
+  color: white;
+  margin-top: 5px;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#characterForm input[type=submit]:hover {
+  border-radius: 25px;
+  transition: all 0.5s ease 0s;
+}
+
+#makeCharacter {
+  float: left;
+  margin-left: 30%;
+  margin-right: 200px;
+}
+
+#characters {
+  float: left;
+  margin-bottom: 10%;
+}
+#characters ul {
+  list-style-type: none;
+}
+#characters ul li {
+  padding: 4px;
+}
+#characters #row1 {
+  display: inline-block;
+}
+#characters #row2 {
+  display: inline-block;
+}
+#characters #characterFace {
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin-top: 20px;
+}
+#characters .character {
+  border: 2px solid #444c48;
+  border-radius: 5%;
+  padding-right: 1.2rem;
+  padding-left: 1.2rem;
+  margin-bottom: 1.2rem;
+  width: 500px;
+}
+#characters .character ul li {
+  padding-bottom: 10px;
+}
+#characters .character ul li #icon {
+  width: 25px;
+  height: auto;
+  float: left;
+  padding-right: 5px;
+}
+#characters .character ul #deleteButton {
+  opacity: 0.85;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  left: 85%;
+  top: -10%;
+}
+
+/*# sourceMappingURL=main.css.map */
